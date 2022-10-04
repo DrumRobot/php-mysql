@@ -17,13 +17,18 @@
             ?>
         </ol>
         <a href="create.php">create</a>
-        <?php if (isset($_GET['id'])) {?>
-            <a href="update.php?id=<?=$_GET['id']?>">update</a>
-            <!-- <a href="delete_process.php?id=<?=$_GET['id']?>">delete</a> -->
-            <form action="delete_process.php" method="post">
-                <input type="hidden" name="id" value="<?=$_GET['id']?>" />
-            </form>
-        <?php }?>
+        <a href="update.php">update</a>
+        <form action="create_process.php" method="post">
+            <p>
+                <input type="text" name="title" placeholder="Title" />
+            </p>
+            <p>
+                <textarea name="description" placeholder="Description"></textarea>
+            </p>
+            <p>
+                <input type="submit" value="Submit" />
+            </p>
+        </form>
         <h2>
             <?= print_title() ?>
         </h2>
